@@ -21,10 +21,10 @@ pd_df=my_dataframe.to_pandas()
 fruit_list = [row['FRUIT_NAME'] for row in my_dataframe.collect()]
 
 ingredients_list = st.multiselect(
-    'Choose up to 5 ingredients:',
-    fruit_list,
-    max_selections=5
-)
+    'Choose up to 5 ingredients:'
+    , my_dataframe
+    , max_selections=5
+    )
 
 
 if ingredients_list:
