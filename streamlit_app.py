@@ -16,7 +16,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 pd_df=my_dataframe.to_pandas()
 st.dataframe(pd_df)
-st.stop()
+#st.stop()
 
 fruit_list = [row['FRUIT_NAME'] for row in my_dataframe.collect()]
 
