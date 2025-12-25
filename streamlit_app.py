@@ -22,7 +22,7 @@ fruit_list = [row['FRUIT_NAME'] for row in my_dataframe.collect()]
 
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
-    , my_dataframe
+    , fruit_list
     , max_selections=5
     )
 
